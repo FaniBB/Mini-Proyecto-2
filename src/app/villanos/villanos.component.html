@@ -1,0 +1,13 @@
+<h1 class="text-center">Villanos <small>Marvel y DC</small></h1>
+
+<div class="card-columns">
+    <div class="card" *ngFor = "let h of misVillanos">
+        <img src="{{h.img}}" alt="" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{h.nombre}}</h5>
+            <p class="card-text">{{h.bio}}</p>
+        </div>
+        <a href="" class="mb-3 btn btn-outline-primary btn-block">Ver mas</a>
+    </div>
+</div>
+

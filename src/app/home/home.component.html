@@ -1,0 +1,54 @@
+<div class="jumbotron" >
+    <h1 class="display-4">Comic Geek</h1>
+    <p class="lead">Bienvenido a Comic Geek, donde además de conocer a tus heroes favoritos ya sean de Marvel o DC, podrás estár al tanto de lo que sucede.</p>
+    <hr class="my-4">
+    <p>¿Quieres saber lo más nuevo en la comunidad?</p>
+    <p>¡Pues no te quedes atrás y suscribete a nuestras noticias!</p>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Saber más </button>
+  </div>
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ingresa tus datos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <form>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Nombre</label>
+            <input type="text" class="form-control" id="nombreForm" placeholder="Nombre" [(ngModel)]="cliente.nombre" name="nombre">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Sexo</label>
+            <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="cliente.sexo" name="sexo">
+              <option>Femenino</option>
+              <option>Masculino</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Correo</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo" [(ngModel)]="cliente.correo" name="correo" >
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Fecha de nacimiento</label>
+            <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Fecha de nacimiento" [(ngModel)]="cliente.fecha" name="fecha">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" (click)="this.nuevoCliente()">Suscribirme</button>
+      </div>
+    </div>
+  </div>
+</div>
